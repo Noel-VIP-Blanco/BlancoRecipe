@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Recipe Details Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Recipe Name -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/recipe_name"
+                        tools:ignore="TextContrastCheck" />
+
+                    <EditText
+                        android:id="@+id/editRecipeName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/custom_edittext"
+                        android:hint="@string/enter_recipe_name"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:minHeight="48dp"
+                        android:paddingStart="8dp"
+                        tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+                    <!-- Number of Servings -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/number_of_servings" />
+
+                    <EditText
+                        android:id="@+id/editServings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/custom_edittext"
+                        android:hint="@string/enter_number_of_servings"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:minHeight="48dp"
+                        android:paddingStart="8dp"
+                        tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+                    <!-- Cooking Time -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cooking_time_minutes" />
+
+                    <EditText
+                        android:id="@+id/editCookingTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/custom_edittext"
+                        android:hint="@string/enter_cooking_time"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:minHeight="48dp"
+                        android:paddingStart="8dp"
+                        tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+                    <!-- Cuisine Type -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cuisine_type"
+                        tools:ignore="TextContrastCheck" />
+
+                    <EditText
+                        android:id="@+id/editCuisineType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/custom_edittext"
+                        android:hint="@string/enter_cuisine_type"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:minHeight="48dp"
+                        android:paddingStart="8dp"
+                        tools:ignore="RtlSymmetry,TextContrastCheck" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Ingredients Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Ingredients -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ingredients" />
+
+                    <!-- RecyclerView for Ingredients -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewIngredients"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:importantForAutofill="no"
+                        android:padding="8dp"
+                        android:scrollbars="vertical" />
+
+                    <!-- Button to add Ingredient -->
+                    <Button
+                        android:id="@+id/btnAddIngredient"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:text="@string/add_an_ingredient"
+                        android:background="@android:color/transparent"
+                        style="?android:attr/buttonBarButtonStyle"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Cooking Process Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Cooking Process -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cooking_process" />
+
+                    <!-- RecyclerView for Cooking Process -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewCookingProcess"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:importantForAutofill="no"
+                        android:padding="8dp"
+                        android:scrollbars="vertical" />
+
+                    <!-- Button to add Cooking Process -->
+                    <Button
+                        android:id="@+id/btnAddCookingProcess"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:text="@string/add_a_cooking_process"
+                        android:background="@android:color/transparent"
+                        style="?android:attr/buttonBarButtonStyle"/>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- Button to submit the recipe -->
+            <Button
+                android:id="@+id/btnSubmitRecipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/submit_recipe" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

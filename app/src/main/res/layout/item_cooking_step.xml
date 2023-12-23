@@ -1,0 +1,30 @@
+<!-- res/layout/item_cooking_step.xml -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- TextView to display the cooking step -->
+    <TextView
+        android:id="@+id/textViewCookingStep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/cookingStepMenuImageButton"
+        android:layout_alignParentStart="true"/>
+
+    <!-- ImageButton positioned to the right of the TextView -->
+    <ImageButton
+        android:id="@+id/cookingStepMenuImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/kebab_menu"
+        android:backgroundTint="@color/transparentColor"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:importantForAccessibility="no" />
+
+</RelativeLayout>
